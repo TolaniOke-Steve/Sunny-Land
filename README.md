@@ -9,3 +9,6 @@ Download the SunnyLand.zip file and open it as a new prpject in your godot windo
 - Godot user interface
 - Cameras and viewports.
 - Animation, collison shapes and more.
+
+# Public License
+-link(https://github.com/TolaniOke-Steve/Sunny-Land/blob/main/public-license.pdf)
