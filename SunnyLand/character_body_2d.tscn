@@ -1,0 +1,71 @@
+[gd_scene load_steps=14 format=3 uid="uid://dwvcoriq1x62"]
+
+[ext_resource type="Texture2D" uid="uid://bywiu8lwmhum4" path="res://Sunny Land Collection Files/Assets/Characters/sunny-froggy/Sprites/taunting/_0000_Layer-1.png" id="1_j4nmw"]
+[ext_resource type="Texture2D" uid="uid://rlopg4hwfnf4" path="res://Sunny Land Collection Files/Assets/Characters/sunny-froggy/Sprites/taunting/_0001_Layer-2.png" id="2_06k48"]
+[ext_resource type="Texture2D" uid="uid://cf01mnrbckqlh" path="res://Sunny Land Collection Files/Assets/Characters/sunny-froggy/Sprites/taunting/_0002_Layer-3.png" id="3_hag7n"]
+[ext_resource type="Texture2D" uid="uid://d3o30cw0y5aiq" path="res://Sunny Land Collection Files/Assets/Characters/sunny-froggy/Sprites/taunting/_0003_Layer-4.png" id="4_nhyrc"]
+[ext_resource type="Texture2D" uid="uid://wsxo51s1wx18" path="res://Sunny Land Collection Files/Assets/Characters/sunny-froggy/Sprites/jumping/_0000_Layer-1.png" id="5_lkq2j"]
+[ext_resource type="Texture2D" uid="uid://bg6y5vpj7tx5" path="res://Sunny Land Collection Files/Assets/Characters/sunny-froggy/Sprites/jumping/_0001_Layer-2.png" id="6_21ttw"]
+[ext_resource type="Texture2D" uid="uid://b103dp6p2vhnb" path="res://Sunny Land Collection Files/Assets/Characters/sunny-froggy/Sprites/jumping/_0002_Layer-3.png" id="7_hix38"]
+[ext_resource type="Texture2D" uid="uid://ciuoau35x1pmp" path="res://Sunny Land Collection Files/Assets/Characters/sunny-froggy/Sprites/jumping/_0003_Layer-4.png" id="8_xfhxi"]
+[ext_resource type="Texture2D" uid="uid://dm452y0tpskkm" path="res://Sunny Land Collection Files/Assets/Characters/sunny-froggy/Sprites/jumping/_0004_Layer-5.png" id="9_gg81h"]
+[ext_resource type="Texture2D" uid="uid://dwkt2anawhncl" path="res://Sunny Land Collection Files/Assets/Characters/sunny-froggy/Sprites/jumping/_0005_Layer-6.png" id="10_2u45r"]
+[ext_resource type="Texture2D" uid="uid://bqixauroto750" path="res://Sunny Land Collection Files/Assets/Characters/sunny-froggy/Sprites/jumping/_0006_Layer-7.png" id="11_v0q0w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iew2q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_42lxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_j4nmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_06k48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hag7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nhyrc")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_lkq2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_21ttw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hix38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xfhxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gg81h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2u45r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_v0q0w")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_iew2q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_42lxy")
+animation = &"Idle"
